@@ -13,10 +13,7 @@ import java.util.List;
 public class CatTest {
 
 
-    @Test
-    public void getSoundReturnsMeow() {
-        Assert.assertEquals(Cat.getSound(), "Мяу");
-    }
+
 
     @Mock
     Feline feline;
@@ -35,5 +32,10 @@ public class CatTest {
         Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"),cat.getFood());
     }
 
+    @Test
+    public void getSoundReturnsMeow() {
+        Cat cat = new Cat(feline);
+        Assert.assertEquals(cat.getSound(), "Мяу");
+    }
 
 }
