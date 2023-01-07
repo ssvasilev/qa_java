@@ -29,6 +29,7 @@ public class LionTest {
         Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }
 
+    //Тест на то, что метод кинет исключение
     @Test(expected = Exception.class)
     public void getTrowExceptionLionSex()throws Exception {
         Lion lion = new Lion("Неопознан");

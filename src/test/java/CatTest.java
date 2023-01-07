@@ -13,8 +13,6 @@ import java.util.List;
 public class CatTest {
 
 
-
-
     @Mock
     Feline feline;
 

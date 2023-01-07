@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
+//Тест проверяет работу метода при разных параметрах пола
 @RunWith(Parameterized.class)
 
 public class LionParameterizedTest {
