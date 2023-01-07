@@ -1,7 +1,9 @@
+import com.example.Animal;
 import com.example.Feline;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -11,13 +13,14 @@ import java.util.List;
 @RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
 
-    @Spy
-    private Feline feline;
+    @Mock
+    Animal animal;
 
     @Test
     public void eatMeatReturnsPredatorMeal() throws Exception {
-        Mockito.when(feline.getFood("Хищник")).thenReturn (List.of("Животные", "Птицы", "Рыба"));
-        Assert.assertEquals(feline.eatMeat(), List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(animal.getFood("Хищник")).thenReturn (List.of("Животные", "Птицы", "Рыба"));
+        Feline feline = new Feline();
+        Assert.assertEquals(feline.eatMeat(), animal.getFood("Хищник"));
     }
 
     @Test
