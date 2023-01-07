@@ -30,7 +30,7 @@ public class LionTest {
     }
 
     @Test(expected = Exception.class)
-    public void getTrowexceptionLionSex()throws Exception {
+    public void getTrowExceptionLionSex()throws Exception {
         Lion lion = new Lion("Неопознан");
     }
 }
